@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title th:text="${titulo}">Hola mundo</title>
+</head>
+<body>
+	<h1 th:text="${titulo}">Hola mundo</h1>
+	
+	<h2 th:utext="${alumno.nombre}"></h2>
+	<h2 th:text="${alumno.matricula}"></h2>
+	<h2 th:if="${alumno.correo}" th:text="${alumno.correo}"></h2>
+	<h2 th:unless="${alumno.correo}" th:text="${'no fue otorgado'}"></h2>
+</body>
+</html>
