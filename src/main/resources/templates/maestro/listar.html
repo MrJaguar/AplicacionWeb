@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title th:text="${titulo}">Hola mundo</title>
+</head>
+<body>
+	<h1 th:text="${titulo}">Hola mundo</h1>
+
+	<ul>
+		<li>
+		<a th:href="@{/maestro/alta(nombre='Eduardo', edad=25)}">Alta id 0</a>
+		<a th:href="@{/maestro/eliminar(id=0)}">Eliminar id 0</a>
+		</li>
+	</ul>
+	<table>
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Nombre</th>
+				<th>Edad</th>
+				<th>Salario</th>
+				<th>Cantidad de Grupos</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="maestro: ${listaMaestros}">
+				<td th:text="${maestro.id}">Matricula</td>
+				<td th:text="${maestro.nombre}">Matricula</td>
+				<td th:text="${maestro.edad}">Matricula</td>
+				<td th:text="${maestro.salario}">Matricula</td>
+				<td th:text="${maestro.cantGrupos}">Matricula</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
